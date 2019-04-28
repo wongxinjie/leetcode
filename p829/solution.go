@@ -2,7 +2,7 @@
 * @File: solution.go
 * @Author: wongxinjie
 * @Date: 2019/4/23
-*/
+ */
 package main
 
 import (
@@ -12,8 +12,8 @@ import (
 func consecutiveNumbersSum(N int) int {
 	count := 0
 	counter := N * 2
-	for n := 1; n * n < counter; n++ {
-		if counter % n == 0 && ((n + N /n) & 1) == 1 {
+	for n := 1; n*n < counter; n++ {
+		if counter%n == 0 && ((n+counter/n)%2) == 1 {
 			count += 1
 		}
 	}
